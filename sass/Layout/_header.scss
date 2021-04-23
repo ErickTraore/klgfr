@@ -1,0 +1,74 @@
+﻿    .header {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        &__logo {
+            width: 100%;
+            height: 4rem;
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            box-shadow: 0px 10px 5px #afa2a2;
+            z-index: +1;
+            @include tablet-only {
+                height: 8rem;
+            }
+            @include desktop-only {
+                height: 14rem;
+            }
+            &--icon {
+                width: 100%;
+                height: 5rem;
+                display: flex;
+                &__fas {
+                    width: 20%;
+                    text-decoration: none;
+                    height: auto;
+                    color: black;
+                    align-items: flex-start;
+                    font-size: 2.5rem;
+                    padding: 0rem 2rem 0.8rem 1.8rem;
+                }
+                &__img {
+                    width: 40%;
+                    height: 60%;
+                    display: inline-flex;
+                    font-size: 2rem;
+                }
+            }
+        }
+        &__search {
+            background-color: #ececec;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            // border-top: 0.1px solid rgba(192, 192, 192, 0.596);
+            justify-content: center;
+            font-size: 1.3rem;
+            &--icon {
+                background-color: #ececec;
+                padding: 1rem 0;
+                border: 1px solid #ececec;
+            }
+            &--input {
+                width: 100%;
+                padding: 1rem 0;
+                .textbox {
+                    border: 1px solid#ececec;
+                    @include borderRadius(100rem);
+                    outline: 0;
+                    background-color: #ececec;
+                    font-size: 16px;
+                    padding: 3px 6px 3px 6px;
+                    transform: scale(1);
+                    transition: transform 330ms ease-in-out;
+                    &:hover {
+                        background-color: white;
+                        Transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
