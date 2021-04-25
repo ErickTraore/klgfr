@@ -36,7 +36,7 @@ a:link {
 .chargement {
   border: 10px solid #f3f3f3;
   border-top: 10px solid #99E2D0;
-  border-bottom: 10px solid #FF79DA;
+  border-bottom: 10px solid #0c2197;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -299,15 +299,9 @@ a:link {
       -o-transition: transform 4000ms;
       animation: pageinit 1000ms;
       -webkit-animation: pageinit 1000ms; }
-      @media screen and (min-width: 768px) {
-        .food__all__project {
-          width: 98%; } }
-      @media screen and (min-width: 1200px) {
-        .food__all__project {
-          width: 98%; } }
       .food__all__project__img {
         width: 100%;
-        height: 17rem;
+        height: 15rem;
         object-fit: cover;
         border-radius: 30px 30px 0px 0px;
         -webkit-border-radius: 30px 30px 0px 0px;
@@ -317,6 +311,23 @@ a:link {
         @media screen and (min-width: 1200px) {
           .food__all__project__img {
             height: 22rem; } }
+        .food__all__project__img--2 {
+          height: 23rem;
+          border-radius: 30px;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          -o-border-radius: 30px;
+          -ms-border-radius: 30px; }
+          @media screen and (min-width: 768px) {
+            .food__all__project__img--2 {
+              width: 100%;
+              height: 45rem; } }
+      @media screen and (min-width: 768px) {
+        .food__all__project {
+          width: 98%; } }
+      @media screen and (min-width: 1200px) {
+        .food__all__project {
+          width: 98%; } }
       .food__all__project__text {
         width: 100%;
         height: 6.5rem;
@@ -373,11 +384,18 @@ a:link {
             bottom: 10%;
             left: 81%; }
           .food__all__project__text__rigth:hover .fas {
-            color: #9356DC;
+            color: #27264b;
             opacity: 1; }
           .food__all__project__text__rigth:hover .far {
             display: none; }
 
+@keyframes clignote {
+  0% {
+    box-shadow: 0px 0px 10px #4183C4; }
+  50% {
+    box-shadow: 0px 0px 0px #4183C4; }
+  100% {
+    box-shadow: 0px 0px 10px #4183C4; } }
 .choise {
   width: 100%;
   height: auto;
@@ -406,7 +424,7 @@ a:link {
     margin: 1rem 1rem 1rem 1rem;
     font-size: 14px;
     color: white;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-image: linear-gradient(to bottom, #0c2197, #27264b);
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -423,7 +441,7 @@ a:link {
       right: 0;
       bottom: 0;
       left: 0;
-      background: radial-gradient(circle, #ff83dd 25%, #ff83dd 25%);
+      background: radial-gradient(circle, #0d23a0 25%, #0d23a0 25%);
       border-radius: 30px;
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
@@ -445,7 +463,7 @@ a:link {
     margin: 1rem 1rem 1rem 1rem;
     font-size: 30px;
     color: white;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-image: linear-gradient(to bottom, #0c2197, #27264b);
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -462,7 +480,7 @@ a:link {
       right: 0;
       bottom: 0;
       left: 0;
-      background: radial-gradient(circle, #ff83dd 25%, #ff83dd 25%);
+      background: radial-gradient(circle, #0d23a0 25%, #0d23a0 25%);
       border-radius: 30px;
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
@@ -478,6 +496,48 @@ a:link {
     .choise__btn_2nd:hover span {
       color: blue;
       font-size: 1.3rem; }
+  .choise__btn_3nd {
+    width: auto;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 16px;
+    color: white;
+    background-image: linear-gradient(to bottom, #ec9e9e, #ee0b0b);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    -ms-border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    animation-name: clignote;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
+    .choise__btn_3nd:hover::after {
+      opacity: 1.2; }
+    .choise__btn_3nd::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: radial-gradient(circle, #0d23a0 25%, #0d23a0 25%);
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -o-border-radius: 30px;
+      -ms-border-radius: 30px;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
+      -webkit-transition: opacity 250ms;
+      -moz-transition: opacity 250ms;
+      -ms-transition: opacity 250ms;
+      -o-transition: opacity 250ms; }
+  .choise:hover span {
+    color: blue;
+    font-size: 1.3rem; }
 
 .container {
   width: 80%;
@@ -516,7 +576,7 @@ a:link {
     .eating__card__cercle {
       margin: 27px 15px 0px -12px;
       padding-top: 0.3rem;
-      background: #9356DC;
+      background: #27264b;
       justify-content: center;
       width: 38px;
       height: 22px;
@@ -544,7 +604,7 @@ a:link {
       -o-border-radius: 50%;
       -ms-border-radius: 50%; }
       .eating__card__icon--fas {
-        color: #9356DC; }
+        color: #27264b; }
     .eating__card__choise {
       width: 100%;
       height: auto;
